@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
         textAlign: "center",
         color: 'white',
         fontSize: 25,
-        fontWeight: "bold"
+        // fontWeight: "bold"
+        fontFamily: 'yekan'
     }
 });
 

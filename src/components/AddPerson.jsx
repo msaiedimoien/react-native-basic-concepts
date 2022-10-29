@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         borderBottomColor: 'orangered',
         padding: 10,
         marginBottom: 10,
-        fontWeight: "bold",
+        fontFamily: "yekan",
         fontSize: 16
     }
 });
