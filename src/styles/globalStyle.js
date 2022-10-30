@@ -49,5 +49,10 @@ export const styles = StyleSheet.create({
         fontSize: 25,
         // fontWeight: "bold"
         fontFamily: 'yekan'
+    },
+    headerIcon: {
+        color: 'whitesmoke',
+        fontSize: 26,
+        marginHorizontal: 15
     }
 });

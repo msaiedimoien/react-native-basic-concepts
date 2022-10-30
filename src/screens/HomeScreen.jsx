@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from "react";
-import {View, FlatList, Keyboard, TouchableWithoutFeedback, Alert, Button} from "react-native";
+import {View, FlatList, Keyboard, TouchableWithoutFeedback, Alert, Button, Text} from "react-native";
 import {styles} from "../styles/globalStyle";
 import Header from "../components/Header";
 import Persons from "../components/Persons";
 import AddPerson from "../components/AddPerson";
-import { useFonts } from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
+import { AntDesign } from '@expo/vector-icons';
 
-SplashScreen.preventAutoHideAsync();
+
 
 const HomeScreen = ({ navigation }) => {
     const [persons, setPersons] = useState([
@@ -17,20 +16,14 @@ const HomeScreen = ({ navigation }) => {
         {name: "محمد اردوخانی", key: "4", completed: false},
     ]);
     const [person, setPerson] = useState('');
-    const [fontsLoaded] = useFonts({
-        'yekan': require('../../assets/fonts/yekan.ttf'),
-        'yekan-bold': require('../../assets/fonts/yekan-bold.ttf'),
-        'nazanin': require('../../assets/fonts/nazanin.ttf'),
-    });
 
-    useEffect(() => {
-        const newFunc = async () => {
-            if (fontsLoaded) {
-                await SplashScreen.hideAsync();
-            }
-        }
-        newFunc();
-    }, [fontsLoaded]);
+    React.useEffect(() => {
+        navigation.setOptions({
+            headerRight: () => (
+                <AntDesign style={styles.headerIcon} name="customerservice" onPress={() => navigation.navigate('About')}/>
+            ),
+        });
+    }, [navigation]);
 
     const pressHandler = (key) => {
         setPersons((prevPersons) => prevPersons.filter((p) => p.key != key));
@@ -63,16 +56,11 @@ const HomeScreen = ({ navigation }) => {
         setPersons(allPersons);
     };
 
-    if (!fontsLoaded) {
-        return null;
-    };
-
     return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.container}>
                 {/* Header */}
                 {/*<Header/>*/}
-                <Button title='درباره ما' onPress={() => navigation.navigate('About')}/>
                 <View style={styles.body}>
                     {/* Add Person */}
                     <AddPerson
