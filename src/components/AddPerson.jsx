@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, TextInput, Button } from 'react-native';
+import { View, TextInput, Button } from 'react-native';
+import {styles} from "../styles/globalStyle";
 
 const AddPerson = ({ person, setPerson, submitHandler }) => {
   return (
@@ -19,16 +20,5 @@ const AddPerson = ({ person, setPerson, submitHandler }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-    input: {
-        borderBottomWidth: 1,
-        borderBottomColor: 'orangered',
-        padding: 10,
-        marginBottom: 10,
-        fontFamily: "yekan",
-        fontSize: 16
-    }
-});
 
 export default AddPerson;
