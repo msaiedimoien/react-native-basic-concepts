@@ -101,8 +101,18 @@ const App = () => {
                     backgroundColor: '#f4511e'
                 }
             }}>
-                <Drawer.Screen name='Tabs' component={TabBottomScreen} options={{title: 'لیست اشخاص'}} />
-                <Drawer.Screen name='Add' component={AddPersonScreen} options={{title: 'اضافه کردن شخص جدید'}} />
+                <Drawer.Screen name='Tabs' component={TabBottomScreen} options={{
+                    title: 'لیست اشخاص',
+                    drawerIcon: config => <Ionicons name="md-list-sharp" size={24} color="black" />
+                }} />
+                <Drawer.Screen name='Add' component={AddPersonScreen} options={{
+                    title: 'اضافه کردن شخص جدید',
+                    drawerIcon: config => <Ionicons name="person-add-outline" size={24} color="black" />
+                }} />
+                <Drawer.Screen name='View' component={ViewPersonScreen} options={{
+                    title: 'مشاهده و ویرایش شخص',
+                    drawerIcon: config => <AntDesign name="edit" size={24} color="black" />
+                }} />
             </Drawer.Navigator>
         </NavigationContainer>
     );

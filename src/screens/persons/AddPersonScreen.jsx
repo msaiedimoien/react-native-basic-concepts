@@ -1,14 +1,13 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
+import {styles} from "../../styles/globalStyle";
 
 const AddPersonScreen = () => {
   return (
-    <View>
-      <Text>Add New Person Screen</Text>
-    </View>
+      <View style={[styles.container, {justifyContent: 'center', alignItems: 'center'}]}>
+          <Text style={[styles.boldText, styles.border1]}>Add New Person Screen</Text>
+      </View>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default AddPersonScreen;

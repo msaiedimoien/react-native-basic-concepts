@@ -1,14 +1,13 @@
 import React from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, View } from 'react-native';
+import {styles} from "../styles/globalStyle";
 
 const SettingsScreen = () => {
   return (
-    <View>
-      <Text>Settings Screen</Text>
+    <View style={[styles.container, {justifyContent: 'center', alignItems: 'center'}]}>
+      <Text style={[styles.boldText, styles.border1]}>Settings Screen</Text>
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default SettingsScreen;

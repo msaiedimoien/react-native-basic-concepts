@@ -26,9 +26,9 @@ export const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     text: {
-        fontSize: 17,
+        fontSize: 16,
         // fontWeight: "bold",
-        fontFamily: 'nazanin'
+        fontFamily: 'yekan'
     },
     input: {
         borderBottomWidth: 1,
@@ -54,5 +54,17 @@ export const styles = StyleSheet.create({
         color: 'whitesmoke',
         fontSize: 26,
         marginHorizontal: 15
+    },
+    boldText: {
+        fontSize: 25,
+        fontWeight: 'bold',
+        color: 'red'
+    },
+    border1: {
+        borderWidth: 1,
+        borderStyle: "dashed",
+        borderRadius: 15,
+        borderColor: 'orange',
+        padding: 20
     }
 });
